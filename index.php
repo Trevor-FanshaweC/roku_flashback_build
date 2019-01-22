@@ -1,4 +1,4 @@
-<?php require_once('admin/scripts/read.php'); 
+<?php require_once('admin/scripts/config.php');
 if(isset($_GET['filter'])){
 	$tbl = 'tbl_movies';
 	$tbl_2 = 'tbl_genre';
