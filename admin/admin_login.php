@@ -17,6 +17,9 @@
 	<title>Admin Login</title>
 </head>
 <body>
+	<?php if(!empty($message)):?>
+		<p><?php echo $message;?></p>
+	<?php endif;?>
 	<form action="admin_login.php" method="post">
 		<label>Username:
 			<input type="text" name="username" value="" required>
