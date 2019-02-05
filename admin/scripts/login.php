@@ -1,6 +1,6 @@
 <?php 
 
-function login($username, $password){
+function login($username, $password, $ip){
 	require_once('connect.php');
 	//Check if username exists
 
@@ -37,6 +37,16 @@ function login($username, $password){
 			$id = $found_user['user_id'];
 			$_SESSION['user_id'] = $id;
 			$_SESSION['user_name'] = $found_user['user_name'];
+
+			//Update user login IP
+			$update_ip_query = 'UPDATE tbl_user SET user_ip=:ip WHERE user_id=:id';
+			$update_ip_set = $pdo->prepare($update_ip_query);
+			$update_ip_set->execute(
+				array(
+					':ip'=>$ip,
+					':id'=>$id
+				)
+			);
 		}
 
 		if(empty($id)){
