@@ -1,0 +1,49 @@
+video { width: 100%; }
+
+.movie-wrapper { 
+	position: relative; padding-top: 52px;
+
+	aside {
+		position: absolute;
+		left: 1em;
+		top: 51px;
+		padding: 2em;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+.movie-title { font-size: 1.7em; }
+.movie-year, .movie-time { font-size: 1.5em; }
+
+.movie-genre {
+	font-size: 1.25em;
+	font-weight: bolder;
+	display: block;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+.genre-name { font-size: 2em; padding: 1em 0 0.35em; }
+
+.movie-thumb { width: 160px; }
+
+.genre-list {
+  padding: 0 14px;
+  list-style-type: none;
+}
+
+.genre-lists { 
+	padding: 0 14px; overflow: hidden;
+
+	> div { 
+		position: relative; 
+		transition: all .5s; 
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden; 
+	}
+}
+
+.genre-item { display: inline-block; }
+
+.movie-list { display: inline-block; margin-right: 1.25em; }

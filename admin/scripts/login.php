@@ -47,16 +47,27 @@ function login($username, $password, $ip){
 					':id'=>$id
 				)
 			);
+
+			$user = array();
+
+			$user['id'] = $found_user['user_id'];
+			$user['username'] = $found_user['user_name'];
+			$user['admin'] = $found_user['user_admin'];
+			$user['access'] = $found_user['user_access'];
+
+			// any additional info you want to pull from the database (tbl_user)
+
+			return $user;
 		}
 
 		if(empty($id)){
-			$message = 'Login Failed!';
+			$message = 'Login Failed';
 			return $message;
 		}
 
-		redirect_to('index.php');
+		//redirect_to('index.php');
 	}else{
-		$message = 'Login Failed!';
+		$message = 'Login Failed';
 		return $message;
 	}
 }
