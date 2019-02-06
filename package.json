@@ -1,0 +1,23 @@
+{
+  "name": "pan-tvr-sorcery",
+  "version": "1.0.0",
+  "description": "roku flashback build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roku",
+    "vue",
+    "components",
+    "ratings",
+    "flashback"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
